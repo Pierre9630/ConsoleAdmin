@@ -1,20 +1,5 @@
 <?php
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     $domain_name = $_POST["name"];
-//     $domain_name_id = $_POST['domain_name_id'];
-    
-//     if(!substr(strpos($domain_name,"."),5)){
-     
-//         die("Pas de point dans le nom de domaine ou nom de premier niveau trop long."); 
-        
-//     }else{
-//         if (!isset($domain_name) || !filter_var($domain_name, FILTER_VALIDATE_DOMAIN,FILTER_FLAG_HOSTNAME) ){
-//             die("Nom du domaine non valide !");
-//         }
-//         if (!isset($domain_name_id) || !filter_var($domain_name_id, FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>"/^\d+$/")))){
-//             die("Entrez un nombre corresponant à votre code client");
-//         }
-//     }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $domain_name = $_POST["name"];
     $domain_name_id = $_POST['domain_name_id'];
@@ -55,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //     $password);
     // set the PDO error mode to exception met le driver pdo en expection si problème
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //$domain_name_id = (int) $domain_name_id;
+    
     // prepare sql and bind parameters
         $stmt = $conn->prepare("DELETE FROM domain_names WHERE domain_name_id =".$domain_name_id." && name = :domain_name ;");
         $stmt->bindParam(':domain_name', $domain_name);
