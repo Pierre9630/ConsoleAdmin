@@ -1,12 +1,10 @@
 <?php
 
 function TableCust(){
-	//require("../db/connect.php");
-	$dsn="mysql:dbname=seeweb".";host="."192.168.1.42";
-	//$servername = "localhost";
-	//$dbname = "seeweb";
-	$username = "root";
-	$password = "test44";
+	
+	require("./db/connect.php");
+	
+	
 	try {
 		$conn = new PDO($dsn,$username,$password);
 		}
