@@ -1,0 +1,4 @@
+#ignore all files in db folder
+db/*.*
+#ignore md file
+*.md
