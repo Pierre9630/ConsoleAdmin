@@ -4,18 +4,7 @@ function TableDomCust(){
 	require "./db/connect.php";
 	
 	
-	//$dsn="mysql:dbname=seeweb".";host="."192.168.1.42";
-	//$servername = "localhost";
-	//$dbname = "seeweb";
-	//$username = "root";
-	//$password = "test44";
-	//try {
-	//	$conn = new PDO($dsn,$username,$password);
-	//	}
-	//catch(PDOException $e)
-	//	{
-	//		echo "Échec de la connexion : %s\n" . $e->getMessage();
-	//	}
+	
 
 	if(ISSET($_POST['submit']) && !ISSET($_POST['radiocheck']) && !ISSET($_POST['radiocheck2'])){
 		//echo "test";
