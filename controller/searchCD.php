@@ -50,7 +50,7 @@ function TableDomCust(){
 		$row['corp_name']."</td><td>".
 		$row['customer_first_name']."</td><td>".
 		$row['customer_last_name']."</td><td>".
-		"<form method=\"POST\" action=\".\controller\DeleteChk.php\"> <button id =\"deletebutton\" type=\"submit\" class=\"btn btn-secondary my-2 my-sm-0\" name=\"delete\" type=\"button\"  value=\"".$row['id']."\">Supprimer</button></form></tr>\n";
+		"<form method=\"POST\" action=\".\controller\DeleteChk.php\"> <button id =\"deletebutton\" type=\"submit\" class=\"btn btn-secondary my-2 my-sm-0\" name=\"delete\" type=\"button\" onclick=\"return  confirm('Vous êtes surs ?')\" value=\"".$row['id']."\">Supprimer</button></form></tr>\n";
 
 	}
 	else if(ISSET($_POST['submit']) && $_POST['radiocheck'] == "name"){
@@ -73,7 +73,7 @@ function TableDomCust(){
 		$row['corp_name']."</td><td>".
 		$row['customer_first_name']."</td><td>".
 		$row['customer_last_name']."</td><td>".
-		"<form method=\"POST\" action=\".\controller\DeleteChk.php\"> <button id =\"deletebutton\" type=\"submit\" class=\"btn btn-secondary my-2 my-sm-0\" name=\"delete\" type=\"button\"  value=\"".$row['id']."\">Supprimer</button></form></tr>\n";
+		"<form method=\"POST\" action=\".\controller\DeleteChk.php\"> <button id =\"deletebutton\" type=\"submit\" class=\"btn btn-secondary my-2 my-sm-0\" name=\"delete\" type=\"button\" onclick=\"return  confirm('Vous êtes surs ?')\" value=\"".$row['id']."\">Supprimer</button></form></tr>\n";
 
 	}
 	else {
@@ -95,6 +95,6 @@ function TableDomCust(){
 		$row['corp_name']."</td><td>".
 		$row['customer_first_name']."</td><td>".
 		$row['customer_last_name']."</td><td>".
-		"<form method=\"POST\" action=\".\controller\DeleteChk.php\"> <button id =\"deletebutton\" type=\"submit\" class=\"btn btn-secondary my-2 my-sm-0\" name=\"delete\" type=\"button\"  value=\"".$row['id']."\">Supprimer</button></form></tr>\n";
+		"<form method=\"POST\" action=\".\controller\DeleteChk.php\"> <button id =\"deletebutton\" type=\"submit\" class=\"btn btn-secondary my-2 my-sm-0\" name=\"delete\" type=\"button\" onclick=\"return  confirm('Vous êtes surs ?')\" value=\"".$row['id']."\">Supprimer</button></form></tr>\n";
 	}
 }
