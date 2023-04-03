@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //     }
     
     require_once ("../db/connect.php"); //add pdo driver active connection rajoute la connexion active de connect.php
-    require_once("MessagePages.php");
+    require_once("messagePages.php");
     // echo $domain_name;
     // echo $domain_name_id;
 
@@ -52,12 +52,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $domain_name = $_POST["name"];
         $stmt->execute(); //execution of query execution de la requête
     
-        Sucess("Données supprimées de la base","../list.php");
+        sucess("Données supprimées de la base","../list.php");
         //echo "Données supprimées de la base <img width=\"20px\" height=\"20px\"src=\"../media/sucess.png\"> <br> <button class=\"btn btn-secondary my-2 my-sm-0\" onclick=\"location.href='../list.php'\">Retour</button>";
     }
     catch(PDOException $e) //Check if errors inside query Si problème dans la requête ou les données saisis
     {
-        Error("erreur sql","../deletedomain.php");
+        error("erreur sql","../deletedomain.php");
         //echo "<br> <button class=\"btn btn-secondary my-2 my-sm-0\" onclick=\"location.href='../deletedomain.php'\">Retour</button>";
     }
     $conn = null; //close connexion fermeture de la connexion

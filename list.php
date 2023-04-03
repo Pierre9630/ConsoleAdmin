@@ -50,7 +50,7 @@ require "controller/searchCD.php"
 							</thead>
 							<tbody>
 								<?php
-									TableDomCust(); //appel du controleur
+									tableDomCust(); //appel du controleur
 								?>
 							</tbody>
 						</table>

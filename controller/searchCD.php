@@ -1,6 +1,6 @@
 <?php
 
-function TableDomCust(){
+function tableDomCust(){
 	require "./db/connect.php";
 	
 	

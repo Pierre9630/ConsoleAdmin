@@ -39,7 +39,7 @@ require "controller/searchCust.php"
 							</thead>
 							<tbody>
 							    <?php
-								 TableCust(); //appel du controleur
+								 tableCust(); //appel du controleur
 							    ?>
 							</tbody>
 						</table>
