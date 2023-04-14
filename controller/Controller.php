@@ -1,9 +1,9 @@
 <?php
   // Vérifie qu'il provient d'un formulaire Check if sent from website form.php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $corp_name = $_POST["corp_name"];
-    $customer_first_name = $_POST["customer_first_name"];
-    $customer_last_name = $_POST["customer_last_name"];
+    serialize($corp_name = $_POST["corp_name"]);
+    serialize($customer_first_name = $_POST["customer_first_name"]);
+    serialize($customer_last_name = $_POST["customer_last_name"]);
 
     //Filtrage de la conformité de la saisie avec les regex Filter for a valid entries informations
     if (!isset($corp_name) || !filter_var($corp_name, FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>"/(?:\s*[a-zA-Z0-9,_\.\077\0100\*\+\&\#\'\~\;\-\!\@\;]{2,}\s*)*/")))){ ///([A-Z][A-Za-z]+ ?)+, (\w\.)+/

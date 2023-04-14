@@ -15,7 +15,7 @@ function tableCust(){
 
 	if(ISSET($_POST['submit'])){
 		//echo "test";
-		$keyword = $_POST['search'];
+		serialize($keyword = $_POST['search']);
 		$sql = "SELECT 
         corp_customers.id, corp_customers.corp_name, corp_customers.customer_first_name, corp_customers.customer_last_name
             FROM corp_customers	

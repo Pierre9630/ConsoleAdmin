@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     //var_dump($_POST);
     //die();
-    $domain_name_id = $_POST['delete'];    
+    serialize($domain_name_id = $_POST['delete']);    
           
 }    
   

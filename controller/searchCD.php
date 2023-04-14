@@ -8,7 +8,7 @@ function tableDomCust(){
 
 	if(ISSET($_POST['submit']) && !ISSET($_POST['radiocheck']) && !ISSET($_POST['radiocheck2'])){
 		//echo "test";
-		$keyword = $_POST['search'];
+		serialize($keyword = $_POST['search']);
 		$sql = "SELECT 
 				domain_names.id,
 				domain_names.name,
@@ -31,7 +31,7 @@ function tableDomCust(){
 		"<form method=\"POST\" action=\".\controller\DeleteChk.php\"> <button id =\"deletebutton\" type=\"submit\" class=\"btn btn-secondary my-2 my-sm-0\" name=\"delete\" type=\"button\"  value=\"".$row['id']."\">Supprimer</button></form></tr>\n";
 
 	}else if(ISSET($_POST['submit']) && $_POST['radiocheck'] == 'annual'){
-		$keyword = $_POST['search'];
+		serialize($keyword = $_POST['search']);
 		$sql = "SELECT 
 				domain_names.id,
 				domain_names.name,
@@ -54,7 +54,7 @@ function tableDomCust(){
 
 	}
 	else if(ISSET($_POST['submit']) && $_POST['radiocheck'] == "name"){
-		$keyword = $_POST['search'];
+		serialize($keyword = $_POST['search']);
 		$sql = "SELECT 
 				domain_names.id,
 				domain_names.name,

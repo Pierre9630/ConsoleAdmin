@@ -11,14 +11,14 @@ $annual_cost = getrd_flt_value(10000,1000000); //Function Fonction de rand
 
 //echo $annual_cost;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $domain_name = $_POST["name"];
-    $domain_name_id = $_POST['domain_name_id'];
+    serialize($domain_name = $_POST["name"]);
+    serialize($domain_name_id = $_POST['domain_name_id']);
     //preg_replace('/^[^,]*,\s*/', '', $input);
     // echo preg_replace('/^[^.]*.\s*/', '', $domain_name);
     // echo !substr(strpos($domain_name,"."),3);
 
     //Filtrage de la conformité de la saisie avec les regex verification de la longeur du nom de domaine et domaine haut(.com,.org.fr etc...) pour 5 caractères maximum et 63 pour le nom secondaire Filter for a valid entries informations
-    //check if longer does not exceed 5 characters for top domain names and down 63 characters(63-5,63-4,63,3...).
+    //check if longer does not exceed 5 characters for top domain names and is under 63 characters(63-5,63-4,63,3...).
     if(!strpos($domain_name,".")){ 
     
         die("Pas de point dans le nom de domaine. <br> <button class=\"btn btn-secondary my-2 my-sm-0\" onclick=\"location.href='../formdomain.php'\">Retour</button>"); 

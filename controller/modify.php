@@ -11,9 +11,9 @@ $annual_cost = getrd_flt_value(10000,1000000); //Function Fonction de rand
 
 //echo $annual_cost;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $domain_name = $_POST["name"];
-    $newdomain_name = $_POST['newname'];
-    $domain_name_id = $_POST['domain_name_id'];
+    serialize($domain_name = $_POST["name"]);
+    serialize($newdomain_name = $_POST['newname']);
+    serialize($domain_name_id = $_POST['domain_name_id']);
     //preg_replace('/^[^,]*,\s*/', '', $input);
     // echo preg_replace('/^[^.]*.\s*/', '', $domain_name);
     // echo !substr(strpos($domain_name,"."),3);

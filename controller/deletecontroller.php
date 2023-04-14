@@ -1,8 +1,8 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $domain_name = $_POST["name"];
-    $domain_name_id = $_POST['domain_name_id'];
+    serialize($domain_name = $_POST["name"]);
+    serialize($domain_name_id = $_POST['domain_name_id']);
     //preg_replace('/^[^,]*,\s*/', '', $input);
     // echo preg_replace('/^[^.]*.\s*/', '', $domain_name);
     // echo !substr(strpos($domain_name,"."),3);
